@@ -11,6 +11,7 @@
 
 ### Setup
 - Clone the repo and cd into it
+- Make sure that there is no directories in .config with same names. Stow will create symlink instead of regular directory.
 - To apply alacritty config use this command:
  ```
  stow -v -t $HOME alacritty
