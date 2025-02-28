@@ -17,3 +17,4 @@
 - To apply another one - substitude alacritty to another program name
 
 - Done, enjoy the final look✨:
+![final-look](./example/final-look.jpg)
