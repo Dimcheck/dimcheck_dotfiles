@@ -10,13 +10,13 @@
 - Install [FiraMonoNerdFont](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/FiraMono.zip) and unzip it content to /usr/local/share/fonts/otf
 
 ### Setup
-- Clone the repo and cd into it
+- Clone the repo and cd into it.
 - Make sure that there is no directories in .config with same names. Stow will create symlink instead of regular directory.
 - To apply alacritty config use this command:
  ```
  stow -v -t $HOME alacritty
  ```
-- To apply another one - substitude alacritty to another program name
+- To apply another one - substitude "alacritty" to another program name.
 
-- Done, enjoy the final look✨:
+Done, enjoy the final look✨:
 ![final-look](./example/final-look.jpg)
