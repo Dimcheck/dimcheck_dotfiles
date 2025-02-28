@@ -7,6 +7,7 @@
 - Install [hyprshot](https://aur.archlinux.org/packages/hyprshot)
 - Install [nautilus](https://archlinux.org/packages/extra/x86_64/nautilus/)
 - Install [swaync](https://archlinux.org/packages/extra/x86_64/swaync/)
+- Install [FiraMonoNerdFont](https://www.nerdfonts.com/font-downloads) and unzip it content to /usr/local/share/fonts/otf
 
 ### Setup
 - Clone the repo and cd into it
