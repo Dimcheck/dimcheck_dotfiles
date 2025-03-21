@@ -1,0 +1,19 @@
+[
+  {
+    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
+    "bindings": {
+      "ctrl-b": "workspace::ToggleLeftDock", // Disable Ctrl+W in normal mode
+      "ctrl-w": "pane::CloseActiveItem", // Disable Ctrl+W in normal mode
+      "ctrl-pageup": "pane::ActivatePreviousItem", // Disable Ctrl+W in normal mode
+      "ctrl-pagedown": "pane::ActivateNextItem", // Disable Ctrl+W in normal mode
+      "ctrl-1": "workspace::ActivatePaneLeft", 
+      "ctrl-2": "workspace::ActivatePaneRight"
+    }
+  },
+  {
+      "context": "Terminal",
+      "bindings": {
+        "ctrl-w": "pane::CloseActiveItem"
+      }
+    }
+]
