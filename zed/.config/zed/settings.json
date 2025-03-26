@@ -15,15 +15,15 @@
       "milliseconds": 1000
     }
   },
-  
+
   // Use zed commit editor
   "terminal": {
     // use detect_env inside project settings
     // "detect_venv": {
-      // "on": {
-        // "directories": [".venv"],
-        // "activate_script": "default"
-      // }
+    // "on": {
+    // "directories": [".venv"],
+    // "activate_script": "default"
+    // }
     // }
     "line_height": "standard",
     "font_family": "FiraMono Nerd Font",
@@ -53,54 +53,51 @@
     "light": "Catppuccin Mocha",
     "dark": "Catppuccin Mocha"
   },
- 
+
   "experimental.theme_overrides": {
-     "background.appearance": "blurred",
-     "background": "#000000bc",
+    "background.appearance": "blurred",
+    "background": "#000000bc",
     // "title_bar.background": "#282c334f",
- 
+
     "toolbar.background": "#282c3344",
     "tab_bar.background": "#282c3344",
- 
-     "panel.background": "#2f343e33",
-     "editor.background": "#2f343e44",
-     "terminal.background": "#2f343e44"
-   },
- 
-   "assistant": {
-     "default_model": {
-       "provider": "zed.dev",
-       "model": "claude-3-5-sonnet-latest"
-     },
-     "version": "2"
-   },
+
+    "panel.background": "#2f343e33",
+    "editor.background": "#2f343e44",
+    "terminal.background": "#2f343e44"
+  },
+
+  "assistant": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-latest"
+    },
+    "version": "2"
+  },
 
   "file_scan_exclusions": [
-     "**/.git",
-     "**/.svn",
-     "**/.hg",
-     "**/CVS",
-     "**/.DS_Store",
-     "**/Thumbs.db",
-     "**/.classpath",
-     "**/.settings",
-     // above is default from Zed
-     "**/out",
-     "**/dist",
-     "**/.husky",
-     "**/.turbo",
-     "**/.vscode-test",
-     "**/.next",
-     "**/.storybook",
-     "**/.tap",
-     "**/.nyc_output",
-     "**/report",
-     "**/node_modules"
-   ],  
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
+    // above is default from Zed
+    "**/out",
+    "**/dist",
+    "**/.husky",
+    "**/.turbo",
+    "**/.vscode-test",
+    "**/.next",
+    "**/.storybook",
+    "**/.tap",
+    "**/.nyc_output",
+    "**/report",
+    "**/node_modules"
+  ],
   "languages": {
-    // Refer https://zed.dev/docs/languages/javascript and https://zed.dev/docs/languages/typescript for more info
-    // You need to install prettier: npm install --save-dev --save-exact prettier
-    // Then in project folder you need to run: node --eval "fs.writeFileSync('.prettierrc','{}\n')"
     "JavaScript": {
       "formatter": {
         "external": {
@@ -108,44 +105,25 @@
           "arguments": ["--stdin-filepath", "{buffer_path}"]
         }
       }
-    },   
+    },
     "Python": {
-      "language_servers": ["ruff", "pyright"],
+      "language_servers": ["ruff", "pylsp"],
       "format_on_save": "on"
     }
   },
   "lsp": {
-    "ruff": {
+    "pylsp": {
       "initialization_options": {
-        "settings": {
-          "line-length": 120,
-          "formatter": {
-            "enabled": true
-          },
-          "organizeImports": true,
-          "fixAll": true,
-          "lint": {
-            "select": [
-              "E",   // pycodestyle errors
-              "F",   // pyflakes
-              "I",   // isort
-              "N",   // pep8-naming
-              "UP",  // pyupgrade
-              "ANN", // flake8-annotations (type hint related)
-              "B",   // flake8-bugbear
-              "C4",  // flake8-comprehensions
-              "DTZ", // flake8-datetimez
-              "ICN", // flake8-import-conventions
-              "PIE", // flake8-pie
-              "PT",  // flake8-pytest-style
-              "RET", // flake8-return
-              "SIM", // flake8-simplify
-              "TRY", // tryceratops
-              "RUF"  // Ruff-specific rules
-            ],
-            "ignore": [],
-            "unfixable": []
-          }
+        "plugins": {
+          "jedi_completion": { "enabled": true },
+          "jedi_hover": { "enabled": true },
+          "jedi_references": { "enabled": true },
+          "jedi_signature_help": { "enabled": true },
+          "jedi_symbols": { "enabled": true },
+          "pylint": { "enabled": false },
+          "pycodestyle": { "enabled": false },
+          "pyflakes": { "enabled": false },
+          "rope_completion": { "enabled": true }
         }
       }
     }
@@ -156,4 +134,3 @@
     "JSON": ["json", "jsonc", "*.code-snippets"]
   }
 }
-
