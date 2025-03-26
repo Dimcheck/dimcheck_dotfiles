@@ -6,6 +6,7 @@
 // To see all of Zed's default settings without changing your
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
+
 {
   "icon_theme": "Catppuccin Mocha",
   "show_edit_predictions": false,
@@ -17,6 +18,13 @@
   
   // Use zed commit editor
   "terminal": {
+    // use detect_env inside project settings
+    // "detect_venv": {
+      // "on": {
+        // "directories": [".venv"],
+        // "activate_script": "default"
+      // }
+    // }
     "line_height": "standard",
     "font_family": "FiraMono Nerd Font",
     "env": {
@@ -100,11 +108,46 @@
           "arguments": ["--stdin-filepath", "{buffer_path}"]
         }
       }
-    },
+    },   
     "Python": {
-      "format_on_save": { "language_server": { "name": "ruff" } },
-      "formatter": { "language_server": { "name": "ruff" } },
-      "language_servers": ["pyright", "ruff"]
+      "language_servers": ["ruff", "pyright"],
+      "format_on_save": "on"
+    }
+  },
+  "lsp": {
+    "ruff": {
+      "initialization_options": {
+        "settings": {
+          "line-length": 120,
+          "formatter": {
+            "enabled": true
+          },
+          "organizeImports": true,
+          "fixAll": true,
+          "lint": {
+            "select": [
+              "E",   // pycodestyle errors
+              "F",   // pyflakes
+              "I",   // isort
+              "N",   // pep8-naming
+              "UP",  // pyupgrade
+              "ANN", // flake8-annotations (type hint related)
+              "B",   // flake8-bugbear
+              "C4",  // flake8-comprehensions
+              "DTZ", // flake8-datetimez
+              "ICN", // flake8-import-conventions
+              "PIE", // flake8-pie
+              "PT",  // flake8-pytest-style
+              "RET", // flake8-return
+              "SIM", // flake8-simplify
+              "TRY", // tryceratops
+              "RUF"  // Ruff-specific rules
+            ],
+            "ignore": [],
+            "unfixable": []
+          }
+        }
+      }
     }
   },
   // File syntax highlighting
@@ -113,3 +156,4 @@
     "JSON": ["json", "jsonc", "*.code-snippets"]
   }
 }
+
