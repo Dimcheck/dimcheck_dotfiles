@@ -21,6 +21,7 @@
         "hyprland/language",
     ],
     "modules-center": [
+        "hyprland/workspaces",
     ],
     "modules-right": [
         "clock", 
