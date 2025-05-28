@@ -18,7 +18,8 @@
         "format-icons": {
             "urgent": " ",
             "active": "",
-            "default": "󰮯"
+            "default": "",
+            //"default": "󰮯"
         },
         "sort-by-number": true,
         "persistent-workspaces": {

@@ -40,7 +40,7 @@ button:hover {
 #workspaces button {
     padding: 0 0;
     background-color: @mantle;
-    color: @yellow;
+    color: @surface1;
 }
 
 #workspaces button:hover {
@@ -94,11 +94,11 @@ button:hover {
 
 
 #language {
-    color: @pink;
+    color: @yellow;
 }
 
 #window {
-    color: @peach;
+    color: @text;
 }
 
 #window,
