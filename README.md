@@ -13,16 +13,28 @@
 - Clone the repo and cd into it.
 - Make sure that there is no directories in .config with same names. Stow will create symlink instead of regular directory.
 - To apply alacritty(you can substitude "alacritty" to another program name) config use this command:
- ```
+ ```bash
  stow -v -t $HOME alacritty
  ```
 
 ## Uninstall
 - To disable symlinks from alacritty config again:
- ```
+ ```bash
  stow -v -t $HOME -D alacritty
  ```
 
 ## Result
 Enjoy the final look✨:
 ![final-look](./example/final-look.jpg)
+
+
+## Notes
+- To set custom fonts to GTK based apps use this command:
+```bash
+gsettings set org.gnome.desktop.interface font-name 'JetBrains Mono 11'
+
+```
+- To list available fonts:
+```bash
+fc-list | grep fontname
+```
