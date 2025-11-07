@@ -16,7 +16,7 @@
         "all-outputs": true,
         "format": "{name} : {icon} ",
         "format-icons": {
-            "urgent": " ",
+            "urgent": "",
             "active": "",
             "default": "",
             //"default": "󰮯"
@@ -29,7 +29,7 @@
 
     // Hyprland Window
     "hyprland/window": {
-       "separate-outputs": true
+       "separate-outputs": false
     },
 
     // Rofi Application Launcher
@@ -128,7 +128,7 @@
 
     // Memory
     "memory": {
-        "format": "{}% ",
+        "format": "{}% ",
         "on-click": "alacritty -e htop"
     },
 
@@ -170,7 +170,7 @@
         "interval": 60,
         "interface-ethernet": "enp1s*",
         "interface-wifi": "wlan0",
-        "format-ethernet": "eth ",
+        "format-ethernet": "eth 󰈀",
         "format-wifi": "{essid} ({signalStrength}%) ",
         "tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "tooltip-format-wifi": "{ifname}: {ipaddr}/{cidr} ",
@@ -198,14 +198,14 @@
     // Pulseaudio
     "pulseaudio": {
         "scroll-step": 2,
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{volume}% 󰕾 {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
-            "headphone": " ",
+            "headphone": "",
             "hands-free": "",
             "headset": "",
             "phone": "",

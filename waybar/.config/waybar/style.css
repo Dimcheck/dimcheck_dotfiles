@@ -3,7 +3,7 @@
 * {
     border: none;
     border-radius: 1px;
-    font-family: JetBrainsMono Nerd Font, Font Awesome;
+    font-family: JetBrainsMono Nerd Font, Font Awesome, sans-serif;
     font-size: 13px;
     min-height: 0;
 }
@@ -50,7 +50,7 @@ button:hover {
 }
 
 #workspaces button.active {
-    color: @green;
+    color: @pink;
 }
 
 

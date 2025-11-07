@@ -1,5 +1,5 @@
 {
-    "output": "HDMI-A-2",
+    "output": "HDMI-A-1",
     // "layer": "top", // Waybar at top layer
     
     // "position": "bottom", // Waybar position (top|bottom|left|right)
