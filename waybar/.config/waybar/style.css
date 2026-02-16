@@ -50,7 +50,7 @@ button:hover {
 }
 
 #workspaces button.active {
-    color: @pink;
+    color: @sky;
 }
 
 
@@ -94,7 +94,7 @@ button:hover {
 
 
 #language {
-    color: @yellow;
+    color: @red;
 }
 
 #window {

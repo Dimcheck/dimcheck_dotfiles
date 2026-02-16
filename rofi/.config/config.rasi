@@ -29,7 +29,7 @@
     color15:    #FFFFFF;
 }
 
-* { border-width: 3px; }
+* { border-width: 2px; }
 
 /* ---- Configuration ---- */
 configuration {
@@ -60,7 +60,7 @@ window {
     margin:                       0px; 
     color:                        #FFFFFF;
     border:                       @border-width;
-    border-color:                 @color6; /* Matches hypr & borders */
+    border-color:                 @color3; /* Matches hypr & borders */
     cursor:                       "default";
     transparency:                 "real";
     location:                     north;
@@ -200,8 +200,8 @@ element normal.active {
 }
 
 element selected.normal {
-    background-color:            @color6;  /* Warm highlight */
-    text-color:                  #000000;
+    text-color:                  @color3;
+    background-color:            inherit;
 }
 
 element selected.urgent {

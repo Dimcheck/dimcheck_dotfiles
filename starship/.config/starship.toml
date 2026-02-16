@@ -1,3 +1,4 @@
+scan_timeout = 150
 format = """
 [](#14FFD1)\
 $os\
@@ -86,20 +87,24 @@ format = '[ $symbol ($version) ]($style)'
 
 [gradle]
 style = "bg:#66E0FF fg:#000000"
+disabled = true
 format = '[ $symbol ($version) ]($style)'
 
 [haskell]
 symbol = " "
+disabled = true
 style = "bg:#66E0FF fg:#000000"
 format = '[ $symbol ($version) ]($style)'
 
 [java]
 symbol = " "
+disabled = true
 style = "bg:#66E0FF fg:#000000"
 format = '[ $symbol ($version) ]($style)'
 
 [julia]
 symbol = " "
+disabled = true
 style = "bg:#66E0FF fg:#000000"
 format = '[ $symbol ($version) ]($style)'
 
@@ -109,6 +114,7 @@ style = "bg:#66E0FF fg:#000000"
 format = '[ $symbol ($version) ]($style)'
 
 [nim]
+disabled = true
 symbol = "󰆥 "
 style = "bg:#66E0FF fg:#000000"
 format = '[ $symbol ($version) ]($style)'
@@ -120,6 +126,7 @@ format = '[ $symbol ($version) ]($style)'
 
 [scala]
 symbol = " "
+disabled = true
 style = "bg:#66E0FF fg:#000000"
 format = '[ $symbol ($version) ]($style)'
 
