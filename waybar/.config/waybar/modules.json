@@ -6,6 +6,7 @@
 //                                        
 //  
 // by Stephan Raabe (2023) 
+// edited by Dimcheck (2026) 
 // ----------------------------------------------------- 
 //
 {
@@ -14,12 +15,11 @@
         "on-click": "activate",
         "active-only": false,
         "all-outputs": true,
-        "format": "{name} : {icon} ",
+        "format": " {name} ",
         "format-icons": {
             "urgent": "",
             "active": "",
-            "default": "",
-            //"default": "󰮯"
+            "default": ""
         },
         "sort-by-number": true,
         "persistent-workspaces": {
@@ -29,29 +29,15 @@
 
     // Hyprland Window
     "hyprland/window": {
-       "separate-outputs": false
+        "separate-outputs": false
     },
 
-    // Rofi Application Launcher
-    "custom/appmenu": {
-        "format": "Apps",
-        "tooltip-format": "Left: Open the application launcher\nRight: Show all keybindings",
-        "on-click": "wofi -show drun -replace",
-        "on-click-right": "~/.config/ml4w/scripts/keybindings.sh",
-        "tooltip": false
-    },
-    
     // Power Menu
     "custom/exit": {
         "format": "",
         "tooltip-format": "Powermenu",
         "on-click": "wlogout -b 4",
         "tooltip": false
-    },
-
-    // "Empty Space"
-    "custom/space": {
-        "format": " "
     },
 
     "custom/temperature": {
@@ -179,22 +165,6 @@
         "on-click": "alacritty -e nmtui"
     },
 
-    // Battery
-    "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{icon}   {capacity}%",
-        "format-charging": "  {capacity}%",
-        "format-plugged": "  {capacity}%",
-        "format-alt": "{icon}  {time}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": [" ", " ", " ", " ", " "]
-    },
-
     // Pulseaudio
     "pulseaudio": {
         "scroll-step": 2,
@@ -225,21 +195,4 @@
         "format-no-controller": ""
     },
 
-    // Other
-    "user": {
-        "format": "{user}",
-        "interval": 60,
-        "icon": false
-    },
-
-    // Idle Inhibator
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "tooltip": true,
-        "format-icons":{
-            "activated": "",
-            "deactivated": ""
-        },
-        "on-click-right": "hyprlock"        
-    }
 }

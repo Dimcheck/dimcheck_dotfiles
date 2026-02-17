@@ -1,14 +1,10 @@
 {
     "output": "HDMI-A-1",
-    // "layer": "top", // Waybar at top layer
-    
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    
-    "height": 30, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 20, // Waybar height (to be removed for auto height)
     "spacing": 4, // Gaps between modules (4px)
-    // Choose the order of the modules
+    "exclusive": true,
 
     // Load Modules
     "include": [
@@ -16,7 +12,6 @@
         "~/.config/waybar/modules.json"
     ],    
     "modules-left": [
-        "custom/space",
         "hyprland/window",
         "hyprland/language",
     ],
