@@ -8,7 +8,7 @@
 - Install [rofi](https://github.com/davatorium/rofi)
 - Install [swaync](https://archlinux.org/packages/extra/x86_64/swaync/)
 - Install [FiraMonoNerdFont](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/FiraMono.zip) and unzip it content to /usr/local/share/fonts/otf
-- Install [Orchis-Theme](https://github.com/vinceliuice/Orchis-theme)
+- Install [Orchis-Theme](https://github.com/vinceliuice/Orchis-theme) with `./install.sh -t pink -c dark -l --tweaks black`
 
 ## Setup
 - Clone the repo and cd into it.
