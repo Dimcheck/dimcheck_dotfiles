@@ -1,33 +1,29 @@
 scan_timeout = 150
 
 format = """
-[](#cba6f7)\
+[╭─](#cba6f7)\
 $username\
-[](bg:#313244 fg:#cba6f7)\
 $directory\
-[](fg:#313244 bg:#f38ba8)\
-$git_branch\
-$git_status\
-[](fg:#f38ba8 bg:#89b4fa)\
-$nodejs\
-$rust\
-$c\
-[](fg:#89b4fa bg:#74c7ec)\
+$git_branch$git_status\
+$nodejs$rust$c$python$lua\
 $docker_context\
-[](fg:#74c7ec bg:#f9e2af)\
 $time\
-[ ](fg:#f9e2af)
-"""
+\n[╰─](#cba6f7)$character"""
+
+[character]
+success_symbol = "[❯](bold #cba6f7)"
+error_symbol = "[❯](bold #f38ba8)"
+vicmd_symbol = "[➜](bold #89b4fa)"
 
 [username]
 show_always = true
-style_user = "bg:#cba6f7 fg:#1e1e2e"
-style_root = "bg:#cba6f7 fg:#1e1e2e"
-format = '[$user ]($style)'
+style_user = "fg:#cba6f7"
+style_root = "fg:#f38ba8"
+format = " [$user]($style)"
 
 [directory]
-style = "bg:#313244 fg:#cdd6f4"
-format = "[ $path ]($style)"
+style = "fg:#cdd6f4"
+format = "[ $path]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
 
@@ -38,63 +34,48 @@ truncation_symbol = "…/"
 "Pictures" = " "
 
 [git_branch]
-symbol = ""
-style = "bg:#f38ba8 fg:#1e1e2e"
-format = '[ $symbol $branch ]($style)'
+symbol = " "
+style = "fg:#f38ba8"
+format = "[ $symbol$branch]($style)"
 
 [git_status]
-style = "bg:#f38ba8 fg:#1e1e2e"
-format = '[$all_status$ahead_behind ]($style)'
+style = "fg:#f38ba8"
+format = "[ $all_status$ahead_behind]($style)"
 
 [c]
 symbol = " "
-style = "bg:#89b4fa fg:#1e1e2e"
-format = '[ $symbol ($version) ]($style)'
+style = "fg:#00599C"
+format = "[ $symbol($version)]($style)"
 
 [nodejs]
 symbol = " "
-style = "bg:#89b4fa fg:#1e1e2e"
-format = '[ $symbol ($version) ]($style)'
+style = "fg:#68A063"
+format = "[ $symbol($version)]($style)"
 
 [rust]
 symbol = " "
-style = "bg:#89b4fa fg:#1e1e2e"
-format = '[ $symbol ($version) ]($style)'
+style = "fg:#DEA584"
+format = "[ $symbol($version)]($style)"
 
-[golang]
-disabled = true
+[python]
+symbol = " "
+style = "fg:#68A063"
+format = "[ $symbol($version)]($style)"
+detect_extensions = ["py"]
+detect_files = ["requirements.txt", "pyproject.toml", "venv"]
 
-[gradle]
-disabled = true
-
-[haskell]
-disabled = true
-
-[java]
-disabled = true
-
-[julia]
-disabled = true
-
-[nim]
-disabled = true
-
-[scala]
-disabled = true
-
-[elixir]
-disabled = true
-
-[elm]
-disabled = true
+[lua]
+symbol = " "
+style = "fg:#000080"
+format = "[$symbol($version)]($style)"
 
 [docker_context]
 symbol = " "
-style = "bg:#74c7ec fg:#1e1e2e"
-format = '[ $symbol $context ]($style)'
+style = "fg:#2496ED"
+format = "[ $symbol$context]($style)"
 
 [time]
 disabled = false
 time_format = "%R"
-style = "bg:#f9e2af fg:#1e1e2e"
-format = '[ 󰣇 $time ]($style)'
+style = "fg:#f9e2af"
+format = "[ 󰣇 $time]($style)"
