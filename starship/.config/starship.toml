@@ -28,13 +28,13 @@ truncation_length = 3
 truncation_symbol = "…/"
 
 [directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
+"Documents" = "📄 "
+"Downloads" = "⬇ "
+"Music"     = "♪ "
+"Pictures"  = "🖼 "
 
 [git_branch]
-symbol = " "
+symbol = "⑂ "
 style = "fg:#f38ba8"
 format = "[ $symbol$branch]($style)"
 
@@ -43,34 +43,34 @@ style = "fg:#f38ba8"
 format = "[ $all_status$ahead_behind]($style)"
 
 [c]
-symbol = " "
+symbol = "Ⓒ "
 style = "fg:#00599C"
 format = "[ $symbol($version)]($style)"
 
 [nodejs]
-symbol = " "
+symbol = "⬢ "
 style = "fg:#68A063"
 format = "[ $symbol($version)]($style)"
 
 [rust]
-symbol = " "
+symbol = "🦀 "
 style = "fg:#DEA584"
 format = "[ $symbol($version)]($style)"
 
 [python]
-symbol = " "
+symbol = "🐍 "
 style = "fg:#68A063"
 format = "[ $symbol($version)]($style)"
 detect_extensions = ["py"]
 detect_files = ["requirements.txt", "pyproject.toml", "venv"]
 
 [lua]
-symbol = " "
+symbol = "🌙 "
 style = "fg:#000080"
 format = "[$symbol($version)]($style)"
 
 [docker_context]
-symbol = " "
+symbol = "🐳 "
 style = "fg:#2496ED"
 format = "[ $symbol$context]($style)"
 
@@ -78,4 +78,6 @@ format = "[ $symbol$context]($style)"
 disabled = false
 time_format = "%R"
 style = "fg:#f9e2af"
-format = "[ 󰣇 $time]($style)"
+format = "[ $time]($style)"
+
+
