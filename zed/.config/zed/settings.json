@@ -8,7 +8,30 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 
 {
-  "agent_ui_font_size": 12.0,
+  "agent_servers": {
+    "your_agent": {
+      "type": "custom",
+      "command": "path_to_executable"
+    }
+  },
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "diff_view_style": "unified",
+  "agent_ui_font_size": 13.0,
+  "ui_font_family": ".ZedSans",
+  "buffer_font_weight": 400.0,
+  "buffer_line_height": "comfortable",
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
   "edit_predictions": {
     "provider": "zed"
   },
@@ -34,7 +57,7 @@
 
   // Use zed commit editor
   "terminal": {
-    "font_size": 11.0,
+    "dock": "right",
     "line_height": "standard",
     "font_family": "FiraMono Nerd Font",
     "env": {
@@ -50,7 +73,7 @@
 
   "soft_wrap": "editor_width",
   "ui_font_size": 13.0,
-  "buffer_font_size": 11.0,
+  "buffer_font_size": 12.0,
   "theme": {
     "mode": "system",
     "light": "Catppuccin Mocha",
@@ -69,16 +92,65 @@
     "terminal.background": "#2f343e44"
   },
 
-  "agent": {
-    "tool_permissions": {
-      "default": "allow"
-    },
-    "default_profile": "ask",
-    "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-7-sonnet"
-    },
+
+// LOCAL LLM SETUP
+"language_models": {
+  "ollama": {
+    "api_url": "http://192.168.0.200:11434",
+    "auto_discover": true,
+    "context_window": 8192,
+    "available_models": [
+      {
+        "name": "qwen3.5:27b-int4",
+        "display_name": "Local Slave",
+        "max_tokens": 8192,
+        "supports_tools": true,
+        "supports_thinking": true,
+        "supports_images": false
+      }
+    ]
+  }
+},
+
+"agent": {
+  "dock": "right",
+  "inline_assistant_model": {
+    "provider": "ollama",
+    "model": "qwen3.5:27b-int4",
+    "enable_thinking": true
   },
+
+  "tool_permissions": {
+    "default": "allow"
+  },
+
+  "default_profile": "ask",
+  "default_model": {
+    "provider": "ollama",
+    "model": "qwen3.5:27b-int4",
+    "enable_thinking": true
+  }
+},
+// LOCAL LLM SETUP
+ 
+  
+  // "agent": {
+  //   "dock": "right",
+  //   "inline_assistant_model": {
+  //     "provider": "zed.dev",
+  //     "model": "claude-haiku-4-5",
+  //     "enable_thinking": false
+  //   },
+  //   "tool_permissions": {
+  //     "default": "allow"
+  //   },
+  //   "default_profile": "ask",
+  //   "default_model": {
+  //     "enable_thinking": true,
+  //     "provider": "zed.dev",
+  //     "model": "claude-haiku-4-5"
+  //   },
+  // },
 
   "file_scan_exclusions": [
     "**/.git",
