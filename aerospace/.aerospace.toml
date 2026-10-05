@@ -81,8 +81,8 @@ on-mode-changed = []
     # All possible commands: https://nikitabobko.github.io/AeroSpace/commands
     # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
 
-    alt-b = 'exec-and-forget open -a "Firefox"'
-    alt-t = 'exec-and-forget open -a "Alacritty"'
+    alt-b = 'exec-and-forget open -n -a "Firefox"'
+    alt-t = 'exec-and-forget open -n -a "Alacritty"'
 
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
