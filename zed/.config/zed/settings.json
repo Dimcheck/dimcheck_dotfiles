@@ -93,65 +93,30 @@
   },
 
 
-// LOCAL LLM SETUP
-"language_models": {
-  "ollama": {
-    "api_url": "http://192.168.0.200:11434",
-    "auto_discover": true,
-    "context_window": 8192,
-    "available_models": [
-      {
-        "name": "qwen3.5:27b-int4",
-        "display_name": "Local Slave",
-        "max_tokens": 8192,
-        "supports_tools": true,
-        "supports_thinking": true,
-        "supports_images": false
-      }
-    ]
-  }
-},
-
-"agent": {
-  "dock": "right",
-  "inline_assistant_model": {
-    "provider": "ollama",
-    "model": "qwen3.5:27b-int4",
-    "enable_thinking": true
+  // LOCAL LLM SETUP
+  "language_models": {
+    "ollama": {
+      "api_url": "http://192.168.0.200:11434",
+      "auto_discover": true,
+      "context_window": 16000,
+    }
   },
-
-  "tool_permissions": {
-    "default": "allow"
-  },
-
-  "default_profile": "ask",
-  "default_model": {
-    "provider": "ollama",
-    "model": "qwen3.5:27b-int4",
-    "enable_thinking": true
-  }
-},
-// LOCAL LLM SETUP
- 
   
-  // "agent": {
-  //   "dock": "right",
-  //   "inline_assistant_model": {
-  //     "provider": "zed.dev",
-  //     "model": "claude-haiku-4-5",
-  //     "enable_thinking": false
-  //   },
-  //   "tool_permissions": {
-  //     "default": "allow"
-  //   },
-  //   "default_profile": "ask",
-  //   "default_model": {
-  //     "enable_thinking": true,
-  //     "provider": "zed.dev",
-  //     "model": "claude-haiku-4-5"
-  //   },
-  // },
-
+  "agent": {
+    "default_model": {
+      "provider": "ollama",
+      "model": "qwen3.5:27b-int4",
+      "enable_thinking": true
+    },
+    "dock": "right",
+    "tool_permissions": {
+      "default": "allow"
+    },
+    "default_profile": "ask",
+  },
+  // LOCAL LLM SETUP
+ 
+ 
   "file_scan_exclusions": [
     "**/.git",
     "**/.svn",
