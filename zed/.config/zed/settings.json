@@ -67,17 +67,6 @@
     "terminal.background": "#2f343e44"
   },
 
-<<<<<<< HEAD
-  "agent": {
-    "always_allow_tool_actions": true,
-    "default_profile": "ask",
-    "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-7-sonnet"
-    },
-  },
-
-=======
 
   // LOCAL LLM SETUP
   "language_models": {
@@ -103,7 +92,6 @@
   // LOCAL LLM SETUP
  
  
->>>>>>> f45d834 (Found the best settings for local ai setup)
   "file_scan_exclusions": [
     "**/.git",
     "**/.svn",
