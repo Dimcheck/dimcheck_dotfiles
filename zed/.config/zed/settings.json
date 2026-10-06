@@ -67,6 +67,7 @@
     "terminal.background": "#2f343e44"
   },
 
+<<<<<<< HEAD
   "agent": {
     "always_allow_tool_actions": true,
     "default_profile": "ask",
@@ -76,6 +77,33 @@
     },
   },
 
+=======
+
+  // LOCAL LLM SETUP
+  "language_models": {
+    "ollama": {
+      "api_url": "http://192.168.0.200:11434",
+      "auto_discover": true,
+      "context_window": 16000,
+    }
+  },
+  
+  "agent": {
+    "default_model": {
+      "provider": "ollama",
+      "model": "qwen3.5:27b-int4",
+      "enable_thinking": true
+    },
+    "dock": "right",
+    "tool_permissions": {
+      "default": "allow"
+    },
+    "default_profile": "ask",
+  },
+  // LOCAL LLM SETUP
+ 
+ 
+>>>>>>> f45d834 (Found the best settings for local ai setup)
   "file_scan_exclusions": [
     "**/.git",
     "**/.svn",
